@@ -73,3 +73,6 @@ C:\Users\yan\Documents\hotel2\hotel2\bin\System.Text.Encodings.Web.xml
 C:\Users\yan\Documents\hotel2\hotel2\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\yan\Documents\hotel2\hotel2\bin\WebDriver.dll
 C:\Users\yan\Documents\hotel2\hotel2\bin\WebDriver.xml
+C:\Users\yan\Documents\hotel2\hotel2\bin\HtmlAgilityPack.dll
+C:\Users\yan\Documents\hotel2\hotel2\bin\HtmlAgilityPack.pdb
+C:\Users\yan\Documents\hotel2\hotel2\bin\HtmlAgilityPack.xml
