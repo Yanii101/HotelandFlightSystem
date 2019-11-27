@@ -262,6 +262,7 @@
     <Compile Include="flights.aspx.designer.cs">
       <DependentUpon>flights.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Scraper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />

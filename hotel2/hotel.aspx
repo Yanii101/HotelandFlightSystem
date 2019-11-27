@@ -27,10 +27,8 @@
     	</div>
     	<div class="container-fluid">
     		<div class="row">
-
-						<% foreach (string s in resAddress){%>
-				
-
+				        
+						<% for (int i= 0;i < sc.Count;i++){%>			     
     			<div class="col-sm col-md-4 col-lg ftco-animate">
     				<div class="destination">
     					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-1.jpg);">
@@ -42,7 +40,7 @@
     					<div class="text p-3">
     						<div class="d-flex">
     							<div class="one">
-		    						<h3><a href="#">Hotel, Italy</a></h3>
+		    						<h3><a href="#"><%= sc[i].Name%></a></h3>
 		    						<p class="rate">
 		    							<i class="icon-star"></i>
 		    							<i class="icon-star"></i>
@@ -53,10 +51,11 @@
 		    						</p>
 	    						</div>
 	    						<div class="two">
-	    							<span runat="server" id="add" class="price per-price">$40<br><small>/night</small></span>
+
+	    							<span id="hotelprice" class="price per-price"><%= sc[i].Price%></span>
     							</div>
     						</div>
-    						<p><%= s%></p>
+    						<p><%= sc[i].Details%></p>
     						<hr>
     						<p class="bottom-area d-flex">
     							<span><i class="icon-map-o"></i> Miami, Fl</span> 
@@ -67,6 +66,7 @@
     			</div>
 
 				<%}%>
+				
 
 
     			
