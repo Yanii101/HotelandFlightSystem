@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Hotel.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="hotel2.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -11,42 +12,38 @@
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>Explore <br></strong> your amazing city</h1>
             <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Find great places to stay, eat, shop, or visit from local experts</p>
             <div class="block-17 my-4">
-              <form action="#" method="post" class="d-block d-flex">
+              <form  runat="server" action="#" method="post" class="d-block d-flex">
                 <div class="fields d-block d-flex">
                   <div class="textfield-search one-third">
-                  	<input type="text" class="form-control" placeholder="From:Country">
+                  	<input type="text" id="fromcountry" class="form-control" placeholder="From:Country">
                   </div>
 
 
 					 <div class="textfield-search one-third">
-                  	<input type="text" class="form-control" placeholder="From:City">
+                  	<input type="text" id="fromcity" class="form-control" placeholder="From:City">
                   </div>
-
 	
 						 <div class="textfield-search one-third">
-                  	<input type="text" id="checkin_date" class="form-control" placeholder="Depart">
+					<asp:TextBox textmode="Date" ID  ="checkin_date" type="text" runat="server" CssClass="form-control " placeholder="Depart"></asp:TextBox>
                   </div>
+					 <div class="textfield-search one-third">
+					<asp:TextBox textmode="Date" id="checkin_date1" runat="server" CssClass="form-control" placeholder="Return"></asp:TextBox>
+                  </div>
+
 						 <div class="textfield-search one-third">
-                  	<input type="text" id="checkin_date" class="form-control" placeholder="Return">
+						<asp:TextBox id="guest" runat="server" CssClass="form-control " placeholder="Guest"></asp:TextBox>
                   </div>
 
 						 <div class="textfield-search one-third">
-                  	<input type="text" class="form-control" placeholder="Guest">
+			       <asp:TextBox id="destcountry" runat="server" CssClass="form-control" placeholder="Country"></asp:TextBox>
                   </div>
 
-					 <div class="select-wrap one-third">
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                      <option value="">Where</option>
-                      <option value="">New York USA</option>
-                      <option value="">California USA</option>
-                      <option value="">London United Kingdom</option>
-                      <option value="">Paris Italy</option>
-                    </select>
+					 <div class="textfield-search one-third">
+			 <asp:TextBox id="destcity" runat="server" CssClass="form-control" placeholder="City"></asp:TextBox>
                   </div>
 
                 </div>
-                <input type="submit" class="search-submit btn btn-primary" value="Search">  
+                <asp:Button CausesValidation="false" OnClick="SearchData" class="search-submit btn btn-primary" ID="Button1" runat="server" Text="Search" />
               </form>
             </div>
             <p>Let's Get You Started</p>
@@ -60,31 +57,10 @@
     </div>
 
 
-	<form runat="server">
-<div class="modal" id="loginform" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Sign In</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-		<asp:Label ID="emaillbl" runat="server" Text="Email"></asp:Label>  <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br /><br />
-		<asp:Label ID="passwordlbl" runat="server" Text="Password"></asp:Label> <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Login</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
-	</form>
+
 
 
 
@@ -464,7 +440,7 @@
 
     <section class="ftco-section">
     	<div class="container">
-				<div class="row justify-content-start mb-5 pb-3">
+				<div class="row justify-content-start mb-4 pb-3">
           <div class="col-md-7 heading-section ftco-animate">
           	<span class="subheading">Special Offers</span>
             <h2 class="mb-4"><strong>Popular</strong> Hotels &amp; Rooms</h2>
@@ -513,39 +489,7 @@
     							<span class="icon-search2"></span>
     						</div>
     					</a>
-    					<div class="text p-3">
-    						<div class="d-flex">
-    							<div class="one">
-		    						<h3><a href="#">Hotel, Italy</a></h3>
-		    						<p class="rate">
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star"></i>
-		    							<i class="icon-star-o"></i>
-		    							<span>8 Rating</span>
-		    						</p>
-	    						</div>
-	    						<div class="two">
-	    							<span class="price per-price">$40<br><small>/night</small></span>
-    							</div>
-    						</div>
-    						<p>Far far away, behind the word mountains, far from the countries</p>
-    						<hr>
-    						<p class="bottom-area d-flex">
-    							<span><i class="icon-map-o"></i> Miami, Fl</span> 
-    							<span class="ml-auto"><a href="#">Book Now</a></span>
-    						</p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
-    				<div class="destination">
-    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/hotel-3.jpg);">
-    						<div class="icon d-flex justify-content-center align-items-center">
-    							<span class="icon-search2"></span>
-    						</div>
-    					</a>
+    					
     					<div class="text p-3">
     						<div class="d-flex">
     							<div class="one">
