@@ -115,9 +115,10 @@
           		</div>
           		<div class="col-md-12 hotel-single mt-4 mb-5 ftco-animate">
           			<span>Our Best hotels &amp; Rooms</span>
-          			<h2>Luxury Hotel in Paris</h2>
+					  <h3 id="hname" runat="server">Placeholder</h3>
+          			<span id="hadd" runat="server">Placeholder</span>
           			<p class="rate mb-5">
-          				<span class="loc"><a href="#"><i class="icon-map"></i> 291 South 21th Street, Suite 721 New York NY 10016</a></span>
+          				<span class="loc"><a href="#"><i class="icon-map"></i> </a></span>
           				<span class="star">
     							<i class="icon-star"></i>
     							<i class="icon-star"></i>
@@ -192,7 +193,7 @@
 						    						</p>
 					    						</div>
 					    						<div class="two">
-					    							<span class="price per-price">$40<br><small>/night</small></span>
+					    							<span class="price per-price" runat="server" id="hprice">Placeholder</span>
 				    							</div>
 				    						</div>
 				    						<p>Far far away, behind the word mountains, far from the countries</p>

@@ -57,7 +57,7 @@ namespace hotel2
 			Scraper data;
 			
 			
-			var output3 = (result.Zip(hotelname, (first, second) => new { Number = first, ABC = second })
+			var output3 = (hotelname.Zip(result, (first, second) => new { Number = first, ABC = second })
 			  .Zip(hotelprice, (first, second) => new { Number = first.Number, ABC = first.ABC, PQR = second })).ToList();
 
 
@@ -70,9 +70,9 @@ namespace hotel2
 
 
 			Session["hoteldetail"] = resultSet;
-			/*Session["address"] = result;
+			Session["address"] = result;
 			Session["name"] = hotelname;
-			Session["price"] = hotelprice;*/
+			Session["price"] = hotelprice;
 			Response.Redirect("hotel.aspx");
 			
 

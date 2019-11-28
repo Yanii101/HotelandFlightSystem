@@ -20,10 +20,27 @@ namespace hotel2
 			resprice= (List<String>)Session["price"];
 
 			sc = (List<Scraper>)Session["hoteldetail"];
+			var value = this.HiddenField.Value;
+
+
+
 
 			//descrip.InnerText = resAddress[1];
 		}
-
+		public void Details(object sender, EventArgs e)
+		{
+			var value = this.HiddenField.Value;
+			string[] ssize = value.Split('-');
+			String hotelname = ssize[0];
+			String hotelprice = ssize[1];
+			String hoteadd = ssize[2];
+			Session["hotelname"] = hotelname;
+			Session["hotelprice"] = hotelprice;
+			Session["hoteladd"] = hoteadd;
+			Response.Redirect("roomtype.aspx");
+		}
 
 	}
+
+
 }
